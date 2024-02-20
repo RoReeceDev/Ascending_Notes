@@ -3,7 +3,7 @@ import Image from 'react-bootstrap/Image'
 import ListGroup from 'react-bootstrap/ListGroup';
 
 
-const Note = ({ note, key, toggleImportance, deleteNote }) => {
+const Note = ({ note, toggleImportance, deleteNote }) => {
   const starIcon = note.important === true ? "star-filled.png" : "star-empty.png"
   const importantLabel = note.important ? "Unmark as favorite" : "Mark as favorite"
   const deleteIcon = "icons8-delete-30.png"
@@ -11,7 +11,7 @@ const Note = ({ note, key, toggleImportance, deleteNote }) => {
   return (
     <ListGroup horizontal>
       <ListGroup.Item as="li" className='Note'>
-          <div key={key}>
+          <div >
             {note.content}
           <ListGroup.Item>
             <Button

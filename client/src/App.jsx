@@ -174,7 +174,7 @@ const App = () => {
         <ListGroup as="ul">
           {notesToShow.map(note =>
             <Note
-              key={note.id}
+              key={note._id}
               note={note}
               toggleImportance={() => toggleImportanceOf(note._id)}
               deleteNote={() => deleteNote(note._id)}
